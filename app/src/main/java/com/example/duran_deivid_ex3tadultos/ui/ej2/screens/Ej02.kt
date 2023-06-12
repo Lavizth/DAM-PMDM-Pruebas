@@ -73,8 +73,8 @@ fun Ej02() {
                 onDismissRequest = { vm.clearDialogError() },
                 confirmButton = { Button(onClick = {vm.clearDialogError()}) { Text(text = "ok")} },
                 text = { Text(text = when (it) {
-                    DialogError.CORRECT -> "Log in correcto"
                     DialogError.ERROR_PASSWORD -> "Error en la contraseña"
+                    DialogError.CORRECT -> "Log in correcto"
                     DialogError.ERROR_EMAIL -> "Email no encontrado"
                 })}
             )

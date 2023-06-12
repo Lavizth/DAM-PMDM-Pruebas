@@ -32,6 +32,11 @@ class LoginViewModel: ViewModel() {
         _dialogError = null
     }
 
+    /*
+    email [X]                        > alertDialog = Email no encontrado
+    email [0] > email-contraseña [0] > alertDialog = Log in correcto
+    email [0] > email-contraseña [x] > alertDialog = Error en la contraseña
+    */
     fun signIn(email: String, password: String){
        _userList.find { it.email == email }?.let {
            _userList.find { it.email == email && it.password == password }?.let {
