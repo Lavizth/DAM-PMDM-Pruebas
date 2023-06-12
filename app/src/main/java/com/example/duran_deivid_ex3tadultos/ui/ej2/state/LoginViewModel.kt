@@ -43,7 +43,7 @@ class LoginViewModel: ViewModel() {
                _dialogError = DialogError.CORRECT
            } ?: {
                _dialogError = DialogError.ERROR_PASSWORD
-               _emailNotExists = true
+               _passwordNotCorrect = true
            }
        } ?: {
            _emailNotExists = true
